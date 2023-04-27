@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- ==================== Navigation bar ===================== -->
+
+    <header class="max-w-full shadow-sm">
+      <div class="w-10/12 mx-auto flex justify-between items-center font-serif">
+        <div class="w-32 h-auto">
+          <img
+            class="object-fits w-full h-full"
+            src="./assets/images/logo1.png"
+            alt="logo"
+          />
+        </div>
+
+        <!-- Mobile Navbar -->
+        <div
+          id="mobile_nav"
+          class="shadow-lg hidden w-60 p-4 rounded-md bg-white absolute top-20 left-28 flex-col space-y-4"
+        >
+          <a
+            href="#"
+            class="hover:bg-green-600 transition px-2 hover:text-white py-1 rounded-md"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="hover:bg-green-600 transition px-2 hover:text-white py-1 rounded-md"
+            >Blog</a
+          >
+          <a
+            href="#"
+            class="hover:bg-green-600 transition px-2 hover:text-white py-1 rounded-md"
+            >Contact</a
+          >
+          <a
+            href="#"
+            class="hover:bg-green-600 transition px-2 hover:text-white py-1 rounded-md"
+            >About</a
+          >
+          <a
+            href="#"
+            class="w-full rounded-full text-center py-1 bg-green-500 text-white"
+            >Login</a
+          >
+        </div>
+
+        <!-- Desktop Navbar -->
+        <div class="hidden md:flex md:justify-between md:space-x-8">
+          <a href="#" class="hover:text-green-600 transition">Home</a>
+          <a href="#" class="hover:text-green-600 transition">Blog</a>
+          <a href="#" class="hover:text-green-600 transition">Contact</a>
+          <a href="#" class="hover:text-green-600 transition">About</a>
+        </div>
+        <div class="flex space-x-4">
+          <button
+            onclick="showMobileNav()"
+            class="inline-block md:hidden p-2 rounded-md hover:bg-gray-300 focus:ring-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+          <button
+            class="px-4 text-sm md:px-8 md:text-md bg-green-500 py-1 md:py-2 rounded-full shadow text-gray-100 transition hover:bg-green-600"
+          >
+            Login
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==================== Hero Section =========================== -->
+    <section id="hero-section" class="mb-4">
+      <div
+        class="max-w-6xl mx-auto py-8 px-4 md:flex md:items-center md:py-4 md:px-2"
+      >
+        <div class="text-center space-y-8 md:text-left md:w-1/2 md:space-y-10">
+          <div id="hero_content" class="space-y-4">
+            <h1 class="text-4xl font-bold md:text-5xl">Welcome To Our Blog</h1>
+            <p class="text-sm text-gray-700 md:text-xl">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum, nesciunt necessitatibus mollitia possimus corporis
+              inventore!
+            </p>
+          </div>
+          <div class="flex justify-center space-x-4 md:justify-start">
+            <input
+              class="border rounded-md px-4 py-1 placeholder:text-sm"
+              type="text"
+              placeholder="Search anything..."
+            />
+            <button
+              class="flex justify-center items-center space-x-2 px-10 rounded-xl bg-green-500 text-white"
+            >
+              <span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-4 h-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                  />
+                </svg>
+              </span>
+              <span class="text-sm">Search</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="w-4/5 h-auto mx-auto md:w-1/2">
+          <img class="w-full h-full" src="./assets/images/01.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Main Section ============================= -->
+
+    <section id="main_section" class="mb-4">
+      <div class="max-w-6xl mx-auto py-8 px-4 space-y-16">
+        <div id="popular_blog" class="space-y-4">
+          <div class="flex justify-between px-2">
+            <p class="text-xl font-bold">Popular Post</p>
+            <p><a href="" class="text-green-700 underline">More</a></p>
+          </div>
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-4">
+            <!-- Card  -->
+            <div
+              class="w-full shadow-md p-2 rounded-lg overflow-hidden space-y-4 border-2 transition transform hover:cursor-pointer hover:border-green-500"
+            >
+              <div class="bg-gray-200 rounded h-1/2">
+                <img
+                  class="w-full h-full object-cover"
+                  src="./assets/images/blog_01.png"
+                  alt=""
+                />
+              </div>
+              <div class="px-1 space-y-2">
+                <p class="text-lg font-bold line-clamp-2">
+                  Earth's intelligence: Being pulled toward the heart of the
+                  world
+                </p>
+                <p class="text-sm line-clamp-3">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                  atque hic voluptates, tempora reiciendis necessitatibus
+                  eveniet dolor excepturi nam accusamus magni quo maxime sint
+                  inventore laborum cupiditate aut adipisci tempore.
+                </p>
+                <p class="text-sm">Oct 4, 2022</p>
+              </div>
+            </div>
+
+            <!-- Card  -->
+            <div
+              class="w-full shadow-md p-2 rounded-lg overflow-hidden space-y-4 border-2 transition transform hover:cursor-pointer hover:border-green-500"
+            >
+              <div class="bg-gray-200 rounded h-1/2">
+                <img
+                  class="w-full h-full object-cover"
+                  src="./assets/images/blog_02.png"
+                  alt=""
+                />
+              </div>
+              <div class="px-1 space-y-2">
+                <p class="text-lg font-bold line-clamp-2">
+                  Earth's intelligence: Being pulled toward the heart of the
+                  world
+                </p>
+                <p class="text-sm line-clamp-3">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                  atque hic voluptates, tempora reiciendis necessitatibus
+                  eveniet dolor excepturi nam accusamus magni quo maxime sint
+                  inventore laborum cupiditate aut adipisci tempore.
+                </p>
+                <p class="text-sm">Oct 4, 2022</p>
+              </div>
+            </div>
+            <!-- Card  -->
+            <div
+              class="w-full shadow-md p-2 rounded-lg overflow-hidden space-y-4 border-2 transition transform hover:cursor-pointer hover:border-green-500"
+            >
+              <div class="bg-gray-200 rounded h-1/2">
+                <img
+                  class="w-full h-full object-cover"
+                  src="./assets/images/blog_03.png"
+                  alt=""
+                />
+              </div>
+              <div class="px-1 space-y-2">
+                <p class="text-lg font-bold line-clamp-2">
+                  Earth's intelligence: Being pulled toward the heart of the
+                  world
+                </p>
+                <p class="text-sm line-clamp-3">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                  atque hic voluptates, tempora reiciendis necessitatibus
+                  eveniet dolor excepturi nam accusamus magni quo maxime sint
+                  inventore laborum cupiditate aut adipisci tempore.
+                </p>
+                <p class="text-sm">Oct 4, 2022</p>
+              </div>
+            </div>
+            <!-- Card  -->
+            <div
+              class="w-full shadow-md p-2 rounded-lg overflow-hidden space-y-4 border-2 transition transform hover:cursor-pointer hover:border-green-500"
+            >
+              <div class="bg-gray-200 rounded h-1/2">
+                <img
+                  class="w-full h-full object-cover"
+                  src="./assets/images/blog_04.png"
+                  alt=""
+                />
+              </div>
+              <div class="px-1 space-y-2">
+                <p class="text-lg font-bold line-clamp-2">
+                  Earth's intelligence: Being pulled toward the heart of the
+                  world
+                </p>
+                <p class="text-sm line-clamp-3">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                  atque hic voluptates, tempora reiciendis necessitatibus
+                  eveniet dolor excepturi nam accusamus magni quo maxime sint
+                  inventore laborum cupiditate aut adipisci tempore.
+                </p>
+                <p class="text-sm">Oct 4, 2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="latest_post" class="space-y-4">
+          <div class="flex justify-between px-2">
+            <p class="text-xl font-bold">Latest Post</p>
+            <p><a href="" class="text-green-700 underline">More</a></p>
+          </div>
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-4">
+            <!-- Card  -->
+            <div
+              class="w-full shadow-md p-2 rounded-lg overflow-hidden space-y-4 border-2 transition transform hover:cursor-pointer hover:border-green-500"
+            >
+              <div class="bg-gray-200 rounded h-1/2">
+                <img
+                  class="w-full h-full object-cover"
+                  src="./assets/images/blog_01.png"
+                  alt=""
+                />
+              </div>
+              <div class="px-1 space-y-2">
+                <p class="text-lg font-bold line-clamp-2">
+                  Earth's intelligence: Being pulled toward the heart of the
+                  world
+                </p>
+                <p class="text-sm line-clamp-3">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                  atque hic voluptates, tempora reiciendis necessitatibus
+                  eveniet dolor excepturi nam accusamus magni quo maxime sint
+                  inventore laborum cupiditate aut adipisci tempore.
+                </p>
+                <p class="text-sm">Oct 4, 2022</p>
+              </div>
+            </div>
+
+            <!-- Card  -->
+            <div
+              class="w-full shadow-md p-2 rounded-lg overflow-hidden space-y-4 border-2 transition transform hover:cursor-pointer hover:border-green-500"
+            >
+              <div class="bg-gray-200 rounded h-1/2">
+                <img
+                  class="w-full h-full object-cover"
+                  src="./assets/images/blog_02.png"
+                  alt=""
+                />
+              </div>
+              <div class="px-1 space-y-2">
+                <p class="text-lg font-bold line-clamp-2">
+                  Earth's intelligence: Being pulled toward the heart of the
+                  world
+                </p>
+                <p class="text-sm line-clamp-3">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                  atque hic voluptates, tempora reiciendis necessitatibus
+                  eveniet dolor excepturi nam accusamus magni quo maxime sint
+                  inventore laborum cupiditate aut adipisci tempore.
+                </p>
+                <p class="text-sm">Oct 4, 2022</p>
+              </div>
+            </div>
+            <!-- Card  -->
+            <div
+              class="w-full shadow-md p-2 rounded-lg overflow-hidden space-y-4 border-2 transition transform hover:cursor-pointer hover:border-green-500"
+            >
+              <div class="bg-gray-200 rounded h-1/2">
+                <img
+                  class="w-full h-full object-cover"
+                  src="./assets/images/blog_03.png"
+                  alt=""
+                />
+              </div>
+              <div class="px-1 space-y-2">
+                <p class="text-lg font-bold line-clamp-2">
+                  Earth's intelligence: Being pulled toward the heart of the
+                  world
+                </p>
+                <p class="text-sm line-clamp-3">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                  atque hic voluptates, tempora reiciendis necessitatibus
+                  eveniet dolor excepturi nam accusamus magni quo maxime sint
+                  inventore laborum cupiditate aut adipisci tempore.
+                </p>
+                <p class="text-sm">Oct 4, 2022</p>
+              </div>
+            </div>
+            <!-- Card  -->
+            <div
+              class="w-full shadow-md p-2 rounded-lg overflow-hidden space-y-4 border-2 transition transform hover:cursor-pointer hover:border-green-500"
+            >
+              <div class="bg-gray-200 rounded h-1/2">
+                <img
+                  class="w-full h-full object-cover"
+                  src="./assets/images/blog_04.png"
+                  alt=""
+                />
+              </div>
+              <div class="px-1 space-y-2">
+                <p class="text-lg font-bold line-clamp-2">
+                  Earth's intelligence: Being pulled toward the heart of the
+                  world
+                </p>
+                <p class="text-sm line-clamp-3">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                  atque hic voluptates, tempora reiciendis necessitatibus
+                  eveniet dolor excepturi nam accusamus magni quo maxime sint
+                  inventore laborum cupiditate aut adipisci tempore.
+                </p>
+                <p class="text-sm">Oct 4, 2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Contact Section ========================== -->
+    <section id="contact_section" class="mb-4">
+      <div class="max-w-6xl mx-auto py-8 px-4">
+        <p class="text-4xl text-center font-bold">Contact Us</p>
+        <p class="text-md text-center w-5/6 mx-auto mt-4 md:text-lg">
+          We use an agile approach to test assumptions and connect with the
+          needs of your audience early and often.
+        </p>
+        <div class="py-6 px-4">
+          <div class="mb-3 space-y-1">
+            <label>Email</label>
+            <input
+              class="border w-full px-2 py-1 rounded-lg text-md"
+              type="text"
+              placeholder="example@gmail.com"
+            />
+          </div>
+          <div class="mb-3 space-y-1">
+            <label>Subject</label>
+            <input
+              class="border w-full px-2 py-1 rounded-lg text-md"
+              type="text"
+              placeholder="Good"
+            />
+          </div>
+          <div class="mb-3 space-y-1">
+            <label>Message</label>
+            <textarea
+              class="border w-full px-2 py-1 rounded-lg text-md"
+              cols="30"
+              rows="5"
+              placeholder="Your message"
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <button
+              class="px-8 py-2 text-white shadow-md bg-[#42b883] rounded-lg"
+              type="submit"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="footer_section" class="bg-gray-900">
+      <div class="max-w-6xl mx-auto py-8 px-14 md:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 space-y-8 md:space-y-0">
+          <div class="mb-10">
+            <p class="text-4xl font-bold text-white">Nature</p>
+          </div>
+
+          <div class="space-y-8">
+            <p class="text-white text-lg text-left font-bold md:text-2xl">
+              Quick Link
+            </p>
+            <ul class="text-gray-400 list-disc ml-6 space-y-2">
+              <li>
+                <a class="transition hover:text-[#42b883]" href="#">Home</a>
+              </li>
+              <li>
+                <a class="transition hover:text-[#42b883]" href="#">Popular</a>
+              </li>
+              <li>
+                <a class="transition hover:text-[#42b883]" href="#">Latest</a>
+              </li>
+              <li>
+                <a class="transition hover:text-[#42b883]" href="#">About us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="space-y-8">
+            <p class="text-white text-lg text-left font-bold md:text-2xl">
+              Quick Link
+            </p>
+            <ul class="text-gray-400 list-disc ml-6 space-y-2">
+              <li>
+                <a class="transition hover:text-[#42b883]" href="#"
+                  >Disclaimer</a
+                >
+              </li>
+              <li>
+                <a class="transition hover:text-[#42b883]" href="#"
+                  >Privicy Policy</a
+                >
+              </li>
+              <li>
+                <a class="transition hover:text-[#42b883]" href="#"
+                  >Term of Use</a
+                >
+              </li>
+              <li>
+                <a class="transition hover:text-[#42b883]" href="#"
+                  >Contact us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let mobileNavbar = document.getElementById("mobile_nav");
+      let body = document.body;
+      let is_active = false;
+      function showMobileNav() {
+        is_active = !is_active;
+        if (is_active) {
+          mobileNavbar.classList.remove("hidden");
+          mobileNavbar.classList.add("flex");
+        } else {
+          mobileNavbar.classList.remove("flex");
+          mobileNavbar.classList.add("hidden");
+        }
+      }
+    </script>
+  </body>
+</html>
